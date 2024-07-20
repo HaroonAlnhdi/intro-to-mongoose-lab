@@ -45,7 +45,7 @@
 
                 const createCustomer = async () => {
                     const name = prompt('Enter customer name: ');
-                    const age = parseInt(prompt('Enter customer age: '), 10);
+                    const age = parseInt(prompt('Enter customer age: '), 10); // convert string to number
                     const customerData = { name, age };
                     const customer = await Customer.create(customerData);
                     console.log("New customer created:", customer);
@@ -74,6 +74,7 @@
                     console.log('Removed customer:', removedCustomer);
                 };
 
+                //display message with querys
                 const app = async () => {
                     let action;
                   
@@ -88,7 +89,7 @@
                         } else if (action === '4') {
                             await deleteCustomer();
                         } else if (action === '5') {
-                            console.log('Quitting...');
+                            console.log('You have been logged out...');
                         } else {
                             console.log('Invalid action. Please try again.');
                         }
