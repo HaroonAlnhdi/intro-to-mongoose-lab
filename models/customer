@@ -1,0 +1,16 @@
+
+// 1 : Difine The model
+
+const mongoose = require('mongoose');
+
+// difine the schema
+const customerSchema = new mongoose.Schema({
+    name: String,
+    age: Number,
+  });
+
+
+  // models/
+const customer = mongoose.model('customer', customerSchema);
+
+module.exports = customer;
